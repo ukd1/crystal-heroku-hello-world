@@ -1,0 +1,13 @@
+{
+  "name": "crystal-heroku-hello-world",
+  "description": "Crystal 'Hello, World!' for Heroku :)",
+  "website": "https://www.rainforestqa.com/",
+  "repository": "https://github.com/ukd1/crystal-heroku-hello-world",
+  "logo": "https://i.imgur.com/8QuzH0I.png",
+  "keywords": ["crystal", "ruby"]
+  "buildpacks": [
+    {
+      "url": "https://github.com/zamith/heroku-buildpack-crystal"
+    }
+  ]
+}
