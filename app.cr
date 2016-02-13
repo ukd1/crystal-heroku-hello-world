@@ -1,10 +1,10 @@
 require "http/server"
+ENV["PORT"] ||= "8080"
 
-port = ENV["PORT"].nil? ? 8080 : ENV["PORT"].to_i
-
-server = HTTP::Server.new(port) do |request|
-  HTTP::Response.ok "text/plain", "Hello, world!"
+server = HTTP::Server.new(ENV["PORT"].to_i) do |context|
+  context.response.content_type = "text/plain"
+  context.response.print "Hello, world!"
 end
 
-puts "Listening on http://0.0.0.0:#{port}"
+puts "Listening on http://0.0.0.0:#{ENV["PORT"]}"
 server.listen
